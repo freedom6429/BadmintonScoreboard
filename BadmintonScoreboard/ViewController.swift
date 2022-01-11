@@ -298,6 +298,7 @@ class ViewController: UIViewController {
     
     @IBAction func newMatchButton(_ sender: Any) {
         roundNumber = 1
+        roundNumberLabel.text = "Round \(roundNumber)"
         deuce = false
         roundWinner = []
         player1Score = 0
