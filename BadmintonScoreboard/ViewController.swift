@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     
     var counter = 0
     var timer = Timer()
-//    var isPlaying = false
     var roundNumber = 1
     //紀錄每回合的winner，才能知道下一局哪方發球還有rewind時應該哪方分數要調整
     var roundWinner: [String] = []
@@ -275,12 +274,10 @@ class ViewController: UIViewController {
     @IBAction func pauseGameButton(_ sender: UIButton) {
         if sender.isSelected {
             sender.isSelected = false
-//            isPlaying = true
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         } else {
             sender.isSelected = true
             timer.invalidate()
-//            isPlaying = false
         }
     }
     
